@@ -1,30 +1,7 @@
-#include <iostream>
-#include <string>
-using namespace std;
 
 
-class Bus {
-public:
-	string brand;
-	string number;
-	int prise;
-	int count;
-	Bus() {}
-	
-	Bus(string brand, string number, int prise, int count) :
-		brand(brand), prise(prise), number(number), count(count) {}
+#include "bus.h"
 
-	string convert() {
-		return brand + ": number = " + number + ", prise = " + to_string(prise) + ", count = " + to_string(count);
-
-	}
-
-
-
-
-
-
-};
 
 int main() {
 	const int SIZE = 10;
@@ -56,7 +33,7 @@ int main() {
 	}
 
 	for (int i = 0; i < SIZE - 1; i++) {
-		cout << buses[i].convert() << " --> "  << endl;
+		cout << buses[i].convert() << endl;
 	}
 
 	// call business logic
